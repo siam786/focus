@@ -15,7 +15,6 @@ class ReuseableTextField extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-
     return TextField(
       controller: textEditingController,
       decoration: InputDecoration(

@@ -1,4 +1,4 @@
-import 'package:circle_app/screens/options.dart';
+import 'package:circle_app/screens/tellus.dart';
 import 'package:circle_app/widgets/reuseable_text_field.dart';
 import 'package:country_state_city_picker/country_state_city_picker.dart';
 import 'package:flutter/material.dart';
@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const OptionScreen(),
+      home: const TellUs(),
     );
   }
 }
@@ -57,7 +57,7 @@ class _HomePageState extends State<HomePage> {
               height: size.height / 15,
             ),
             const Text(
-              "Let’s create your\n account",
+              "Let’s create your\naccount",
               style: TextStyle(
                   color: Colors.black,
                   fontSize: 28,

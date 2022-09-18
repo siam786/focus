@@ -1,6 +1,8 @@
 import 'package:circle_app/widgets/reuseable_text_field.dart';
 import 'package:flutter/material.dart';
 
+import '../widgets/reuse_textContent.dart';
+
 class OptionScreen extends StatelessWidget {
   const OptionScreen({super.key});
 
@@ -30,7 +32,7 @@ class OptionScreen extends StatelessWidget {
                   height: size.height / 15,
                 ),
                 const Text(
-                  'Lets Create Your\n account',
+                  'Lets Create Your\naccount',
                   style: TextStyle(
                       color: Colors.black,
                       fontSize: 28,
@@ -59,34 +61,46 @@ class OptionScreen extends StatelessWidget {
           ),
           Container(
             height: 200,
+            padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 20),
             decoration: const BoxDecoration(
-              color: Colors.blue,
+              color: Colors.white,
               borderRadius: BorderRadius.only(
                   topLeft: Radius.circular(10.0),
                   topRight: Radius.circular(10.0)),
             ),
             child: Column(
-              children: [
-                const Padding(
-                  padding: EdgeInsets.all(20.0),
-                  child: Text(
-                    'Max out the personality that shines throughon your profile!',
-                    style: TextStyle(
-                        color: Colors.black, fontSize: 15.0, wordSpacing: 3),
-                  ),
+              children: const [
+                Text(
+                  'Max out the personality that shines throughon your profile!',
+                  style: TextStyle(
+                      color: Colors.black, fontSize: 15.0, wordSpacing: 3),
                 ),
-                const SizedBox(
+                SizedBox(
                   height: 10,
                 ),
-                Container(
-                  child: Row(
-                    children: [
-                      Text(
-                        'Would love to have a coffee meeting with...',
-                        style: TextStyle(color: Colors.white, fontSize: 20.0),
-                      ),
-                    ],
-                  ),
+                ReUseTextContent(
+                  textHint: 'Would love to have a coffee meetingwith...',
+                ),
+                SizedBox(
+                  height: 10,
+                ),
+                ReUseTextContent(
+                  textHint: 'An unexpected career change for me was...',
+                ),
+                SizedBox(
+                  height: 10,
+                ),
+                ReUseTextContent(
+                  textHint: 'Would love to have a coffee meetingwith...',
+                ),
+                SizedBox(
+                  height: 10,
+                ),
+                ReUseTextContent(
+                  textHint: 'An unexpected career change for me was...',
+                ),
+                SizedBox(
+                  height: 10,
                 )
               ],
             ),
