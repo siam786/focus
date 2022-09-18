@@ -1,4 +1,3 @@
-import 'package:circle_app/widgets/reuseable_text_field.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 
@@ -19,48 +18,45 @@ class TellUs extends StatelessWidget {
         elevation: 0,
         backgroundColor: Colors.transparent,
       ),
-      body: Column(
-        children: [
-          SingleChildScrollView(
-            padding: EdgeInsets.symmetric(horizontal: size.width * 0.03),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                const Text(
-                  'Would love to have a coffee meeting with...',
-                  style: TextStyle(
-                      color: Colors.black,
-                      fontSize: 18,
-                      fontWeight: FontWeight.w700),
-                ),
-                SizedBox(
-                  height: 350,
-                  child: ReuseableTextField(
-                    textHint: "Tell Us",
-                    textEditingController: noteController,
-                    textInputType: TextInputType.text,
-                    textInputAction: TextInputAction.done,
-                  ),
-                ),
-                Column(
-                  children: [
-                    SizedBox(
-                      width: double.infinity,
-                      height: 50.0,
-                      child: ElevatedButton(
-                        onPressed: () => () {},
-                        child: const Text(
-                          'Submit',
-                          style: TextStyle(fontSize: 15.0),
-                        ),
-                      ),
-                    )
-                  ],
-                )
-              ],
+      body: SingleChildScrollView(
+        padding: EdgeInsets.symmetric(horizontal: size.width * 0.03),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            const Text(
+              'Would love to have a coffee meeting with...',
+              style: TextStyle(
+                  color: Colors.black,
+                  fontSize: 18,
+                  fontWeight: FontWeight.w700),
             ),
-          ),
-        ],
+            const SizedBox(
+                height: 350,
+                child: TextField(
+                  minLines: 20,
+                  maxLines: 20,
+                  decoration: InputDecoration(
+                      border: InputBorder.none,
+                      hintText: 'Tell Us',
+                      hintStyle: TextStyle(
+                          fontSize: 24.0,
+                          fontWeight: FontWeight.w700,
+                          color: Colors.grey)),
+                )),
+            SizedBox(
+              height: size.height / 3,
+            ),
+            ElevatedButton(
+              onPressed: () => () {},
+              style: ElevatedButton.styleFrom(
+                  padding: EdgeInsets.symmetric(horizontal: size.width * 0.4)),
+              child: const Text(
+                'Submit',
+                style: TextStyle(fontSize: 15.0),
+              ),
+            )
+          ],
+        ),
       ),
     );
   }

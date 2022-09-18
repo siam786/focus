@@ -59,50 +59,52 @@ class OptionScreen extends StatelessWidget {
           const SizedBox(
             height: 20,
           ),
-          Container(
-            height: 200,
-            padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 20),
-            decoration: const BoxDecoration(
-              color: Colors.white,
-              borderRadius: BorderRadius.only(
-                  topLeft: Radius.circular(10.0),
-                  topRight: Radius.circular(10.0)),
-            ),
-            child: Column(
-              children: const [
-                Text(
-                  'Max out the personality that shines throughon your profile!',
-                  style: TextStyle(
-                      color: Colors.black, fontSize: 15.0, wordSpacing: 3),
-                ),
-                SizedBox(
-                  height: 10,
-                ),
-                ReUseTextContent(
-                  textHint: 'Would love to have a coffee meetingwith...',
-                ),
-                SizedBox(
-                  height: 10,
-                ),
-                ReUseTextContent(
-                  textHint: 'An unexpected career change for me was...',
-                ),
-                SizedBox(
-                  height: 10,
-                ),
-                ReUseTextContent(
-                  textHint: 'Would love to have a coffee meetingwith...',
-                ),
-                SizedBox(
-                  height: 10,
-                ),
-                ReUseTextContent(
-                  textHint: 'An unexpected career change for me was...',
-                ),
-                SizedBox(
-                  height: 10,
-                )
-              ],
+          Positioned(
+            bottom: 0,
+            child: Container(
+              padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 20),
+              decoration: const BoxDecoration(
+                color: Colors.white,
+                borderRadius: BorderRadius.only(
+                    topLeft: Radius.circular(10.0),
+                    topRight: Radius.circular(10.0)),
+              ),
+              child: Column(
+                children: const [
+                  Text(
+                    'Max out the personality that shines throughon your profile!',
+                    style: TextStyle(
+                        color: Colors.black, fontSize: 15.0, wordSpacing: 3),
+                  ),
+                  SizedBox(
+                    height: 10,
+                  ),
+                  ReUseTextContent(
+                    textHint: 'Would love to have a coffee meetingwith...',
+                  ),
+                  SizedBox(
+                    height: 10,
+                  ),
+                  ReUseTextContent(
+                    textHint: 'An unexpected career change for me was...',
+                  ),
+                  SizedBox(
+                    height: 10,
+                  ),
+                  ReUseTextContent(
+                    textHint: 'Would love to have a coffee meetingwith...',
+                  ),
+                  SizedBox(
+                    height: 10,
+                  ),
+                  ReUseTextContent(
+                    textHint: 'An unexpected career change for me was...',
+                  ),
+                  SizedBox(
+                    height: 10,
+                  )
+                ],
+              ),
             ),
           )
         ],

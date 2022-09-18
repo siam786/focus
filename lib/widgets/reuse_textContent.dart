@@ -7,8 +7,9 @@ class ReUseTextContent extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final size = MediaQuery.of(context).size;
     return Container(
-      padding: const EdgeInsets.all(20),
+      padding: EdgeInsets.symmetric(vertical: size.height / 50),
       decoration: BoxDecoration(
           gradient:
               const LinearGradient(colors: [Colors.blueAccent, Colors.blue]),
