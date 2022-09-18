@@ -1,4 +1,4 @@
-import 'package:circle_app/screens/tellus.dart';
+import 'package:circle_app/screens/signUpComplete.dart';
 import 'package:circle_app/widgets/reuseable_text_field.dart';
 import 'package:country_state_city_picker/country_state_city_picker.dart';
 import 'package:flutter/material.dart';
@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const TellUs(),
+      home: const SignUpComplete(),
     );
   }
 }

@@ -34,7 +34,7 @@ class TellUs extends StatelessWidget {
                       fontWeight: FontWeight.w700),
                 ),
                 SizedBox(
-                  height: size.height / 15,
+                  height: 350,
                   child: ReuseableTextField(
                     textHint: "Tell Us",
                     textEditingController: noteController,
@@ -42,6 +42,21 @@ class TellUs extends StatelessWidget {
                     textInputAction: TextInputAction.done,
                   ),
                 ),
+                Column(
+                  children: [
+                    SizedBox(
+                      width: double.infinity,
+                      height: 50.0,
+                      child: ElevatedButton(
+                        onPressed: () => () {},
+                        child: const Text(
+                          'Submit',
+                          style: TextStyle(fontSize: 15.0),
+                        ),
+                      ),
+                    )
+                  ],
+                )
               ],
             ),
           ),
